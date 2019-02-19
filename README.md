@@ -11,7 +11,7 @@ Angela Sanchez Niño
 Jonathan Ivan Aguilar Cedillo
 
 ## 
-[Guadalupe Alejandro Pérez Camacho] (https://github.com/alejandro-00)
+[Guadalupe Alejandro Pérez Camacho](https://github.com/alejandro-00)
 Mario Alejandro Manzano
 
 ## Arquitectos
