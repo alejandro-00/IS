@@ -12,6 +12,7 @@ Jonathan Ivan Aguilar Cedillo
 
 ## Programadores
 [Guadalupe Alejandro Pérez Camacho](https://github.com/alejandro-00)
+
 Mario Alejandro Manzano
 
 ## Arquitectos
