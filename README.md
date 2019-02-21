@@ -18,7 +18,7 @@ Jonathan Ivan Aguilar Cedillo
 ## Arquitectos
 Emilio Barrera González
 
-Jesús Ángel Rodríguez Martínez
+[Jesús Ángel Rodríguez Martínez](https://github.com/martinez-angel)
 
 ## Analistas
 
