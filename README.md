@@ -16,6 +16,9 @@ Jonathan Ivan Aguilar Cedillo
 [Mario Alejandro Manzano Montes](https://github.com/mariomanza)
 
 ## Arquitectos
+Emilio Barrera González
+
+Jesús Ángel Rodríguez Martínez
 
 ## Analistas
 
