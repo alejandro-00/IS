@@ -18,3 +18,6 @@ Jonathan Ivan Aguilar Cedillo
 ## Arquitectos
 
 ## Analistas
+
+## Contactos
+[Ing. Gerardo Reyna](greyna@uadec.edu.mx)
