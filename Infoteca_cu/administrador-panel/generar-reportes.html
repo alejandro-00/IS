@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="panel-admin.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.2/css/bootstrap-select.min.css">
+	<title>Panel de Administración</title>
+</head>
+<body>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-12 nav-superior d-flex justify-content-end">
+			<a href="#" class="nav-link"><small>Cerrar Sesión</small></a>
+		</div>
+	</div>
+	<div class="row">	
+			<div class="col-12 nav-inferior">
+			<ul class="nav fm-nav">
+				<li class="nav-item">
+					<a href="generar-reportes.html" class="gen-reportes nav-link">Generar Reportes</a>
+				</li>
+				<li class="nav-item">
+					<a href="inicio.html" class="inicio nav-link active">Inicio</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="container-fluid">
+	<div class="row mt-3">
+		<div class="col-2 ml-2 pt-3 panel-contenedor">
+			<div class="list-group" id="lista" role="tablist">
+				<a href="#facultad" class="list-group-item list-group-item-action active" data-toggle="list" role="tab" aria-controls="facultad">Facultad</a>
+				<a href="#carrera" class="list-group-item list-group-item-action" data-toggle="list" role="tab" aria-controls="carrera">Carrera</a>
+			</div>	
+		</div>
+
+
+		<div class="col-7 pt-3 ml-2 panel-contenedor">
+			<div class="tab-content " id="nav-tabContent">
+				<div class="tab-pane fade show active" id="facultad" role="tabpanel" aria-labelledby="facultad">
+					<div class="d-flex flex-nowrap">
+						<div class="form-group">
+							<label for="fecha-inicial">Seleccione la primera fecha</label>
+							<input type="date" class="form-control" name="fecha-inicial" id="fecha-inicial">
+						</div>
+						<div class="form-group ml-3">
+							<label for="fecha-final">Seleccione la útlima fecha</label>
+							<input type="date" class="form-control" name="fecha-final" id="fecha-final">
+						</div>
+					</div>
+			
+			<div class="form-group">
+				<label for="facultad">Escuelas/Facultades</label>
+				<select name="pais" id="facultad" class="form-control" size="7" multiple="">
+					<option value="todos">Todas las Escuelas/Facultades.</option>
+					<option value="">Fac. de Arquitectura</option>
+					<option value="">Fac. de Ciencias de la Administración</option>
+					<option value="">Fac. de Ciencias, Educación y Humanidades</option>
+					<option value="">Fac. de Ciencias Químicas</option>
+					<option value="">Fac. de Economía</option>
+					<option value="">Fac. de Ingeniería</option>
+					<option value="">Fac. de Jurisprudencia</option>
+					<option value="">Fac. de Medicina</option>
+					<option value="">Fac. de Sistemas</option>
+					<option value="">Fac. de Ciencias Físico Matemáticas</option>
+					<option value="">Fac. de Odontología</option>
+					<option value="">Fac. de Mercadotecnia</option>
+					<option value="">Fac. de Trabajo Social</option>
+					<option value="">Esc. de Artes Plásticas</option>
+					<option value="">Esc. de Ciencias de la Comunicación</option>
+					<option value="">Esc. de Psicología</option>
+					<option value="">Esc. de Ciencias Sociales (Historia)</option>
+					<option value="">Esc. Superior de Música</option>
+					<option value="">Esc. de Licenciatura en Enfermería</option>
+					<option value="">Esc. De Bach. "Ateneo Fuente"</option>
+					<option value="">Esc. De Bach. Mariano Narvaez Glz</option>
+					<option value="">Instituto de Ciencias y Humanidades (ICH)</option>
+					<option value="">Instituto de Enseñanza Abierta (IDEA) </option>
+					<option value="">CISE</option>
+					<option value="">CIMA</option>
+					<option value="">Centro de Idiomas </option>
+					<option value="">Incorporados</option>
+					<option value="">Externos </option>
+				</select> 
+			</div>
+			
+			<h7>Turno</h7>
+			<form action="" class="mt-2">
+				<div class="custom-control custom-control-inline custom-radio">
+					<input type="radio" name="turno" id="tm" value="tm" class="custom-control-input"> 	
+					<label for="tm" class="custom-control-label">Turno Matutino</label>					
+				</div>
+				<div class="custom-control custom-control-inline custom-radio">	
+					<input type="radio" name="turno" id="tv" value="tv" class="custom-control-input">
+					<label for="tv" class="custom-control-label">Turno Vespertino</label>		
+				</div>
+				<div class="custom-control custom-control-inline custom-radio">
+					<input type="radio" name="turno" id="at" value="at" class="custom-control-input">
+					<label for="at" class="custom-control-label">Ambos Turnos</label>		
+				</div>
+			</form>
+
+			<hr>
+			<h7>Sexo</h7>
+			<form action="" class="mt-2">
+				<div class="custom-control custom-control-inline custom-radio">
+					<input type="radio" name="sexo" id="h" value="h" class="custom-control-input"> 	
+					<label for="h" class="custom-control-label">Hombre</label>					
+				</div>
+				<div class="custom-control custom-control-inline custom-radio">
+					<input type="radio" name="sexo" id="m" value="m" class="custom-control-input">
+					<label for="m" class="custom-control-label">Mujer</label>		
+				</div>
+				<div class="custom-control custom-control-inline custom-radio">
+					<input type="radio" name="sexo" id="a" value="a" class="custom-control-input">
+					<label for="a" class="custom-control-label">Ambos</label>		
+				</div>
+			</form>
+
+				<hr>
+				<div class="d-flex justify-content-end">
+						<input type="submit" value="Generar Reporte" class="btn btn-primary justify-content-end mb-3">
+				</div>
+			</div>
+
+		<div class="tab-pane fade show" id="carrera" role="tabpanel" aria-labelledby="carrera">
+				<div class="d-flex flex-nowrap">
+					<div class="form-group">
+						<label for="fecha-inicial">Seleccione la primera fecha</label>
+						<input type="date" class="form-control" name="fecha-inicial" id="fecha-inicial">
+					</div>
+					<div class="form-group ml-3">
+						<label for="fecha-final">Seleccione la útlima fecha</label>
+						<input type="date" class="form-control" name="fecha-final" id="fecha-final">
+					</div>
+				</div>
+
+			<div class="form-group">
+				<label for="carreras">Carreras</label>
+				<select  method="get" name="pais" id="carreras" class="form-control" size="7" multiple>
+					<option value="todas">Todas las Carreras.</option>
+					<option value="" disabled="">- Escuela de Artes Plasticas -</option>
+					<option value="1">Lic. Diseño Gráfico</option>
+					<option value="2">Lic. Artes Plasticas</option>
+					<option value="" disabled="">- Facultad de Ciencia, Educación y Humanidades -</option>
+					<option value="3">Lic. en ciencias de la Educación</option>
+					<option value="4">Lic. en letras Españolas</option>
+					<option value="" disabled="">- Facultad de Ciencias de la Comunicación -</option>
+					<option value="5">Lic. en comunicación Organizacional y Rel. públicas </option>
+					<option value="6">Lic. en comunicación Organizacional y Rel. públicas </option>
+					<option value="" disabled="">- Escuela de Ciencias Sociales -</option>
+					<option value="7">Lic. en Historia</option>
+					<option value="" disabled="">- Escuela Superior de Musica -</option>
+					<option value="8">Lic. en Musica Acentuación en percuciones</option>
+					<option value="9">Lic. en Musica Acentuación en piano</option>
+					<option value="10">Lic. en Musica Acentuación en composición</option>
+					<option value="11">Lic. en Musica Acentuación en contrabajo</option>
+					<option value="12">Lic. en Musica Acentuación en flauta</option>
+					<option value="13">Lic. en Musica Acentuación en canto</option>
+					<option value="14">Lic. en Musica Acentuación en violín</option>
+					<option value="15">Lic. en Musica Acentuación en violoncello</option>
+					<option value="16">Lic. en Musica Acentuación en guitarra</option>
+					<option value="">Lic. en Musica Acentuación en clarinete</option>
+					<option value="">Lic. en Musica Acentuación en viola</option>
+					<option value="">Lic. en Musica Acentuación en educacion musical</option>
+					<option value="" disabled="">- Facultad de Trabajo Social -</option>
+					<option value="">Lic. en trabajo social</option>
+					<option value="" disabled="">- Facultad de Ciencias de la Administracion -</option>
+					<option value="">Lic. en contaduría pública</option>
+					<option value="">Lic. en administración de empresas</option>
+					<option value="">Lic. en administación de recursos humanos</option>
+					<option value="" disabled="">- Facultad de Economía -</option>
+					<option value="">Lic. en economía</option>
+					<option value="" disabled="">- Facultad de Jurisprudencia -</option>
+					<option value="">Lic. en derecho</option>
+					<option value="" disabled="">- Facultad de Mercadotecnia -</option>
+					<option value="">Lic. en mercadotecnia</option>
+					<option value="" disabled="">- Facultad de Ingeniería -</option>
+					<option value="">Ing. civil</option>
+					<option value="">Ing. mecánico eléctrico</option>
+					<option value="">Ing. mecánico administrador</option>
+					<option value="" disabled="">- Facultad de Sistemas -</option>
+					<option value="">Ing. industrial y de sistemas</option>
+					<option value="">Ing. en sistemas computacionales</option>
+					<option value="">Ing. en electrónica y comunicaciones</option>
+					<option value="">Ing. en tecnologías de la informacion y comunicaciones</option>
+					<option value="">Ing. automotriz</option>
+					<option value="" disabled="">- Ing. automotriz -</option>
+					<option value="">Lic. Químico</option>
+					<option value="">Ing. Quimica</option>
+					<option value="">Quimico Farmacobiólogo</option>
+					<option value="" disabled="">- Facultad de Arquitectura -</option>
+					<option value="">Arquitecto</option>
+					<option value="" disabled="">- Facultad de Ciencias Físico Matemáticas -</option>
+					<option value="">Lic. en Matemáticas aplicadas</option>
+					<option value="">Ing. física</option>
+					<option value="" disabled="">- Facultad de Medicina -</option>
+					<option value="">Medico cirujano</option>
+					<option value="" disabled="">- Facultad de Odontología -</option>
+					<option value="">Cirujano dentista</option>
+					<option value="" disabled="">- Facultad de Psicología -</option>
+					<option value="">Lic. en psicología</option>
+					<option value="" disabled="">- Facultad de Enfermería -</option>
+					<option value="">Lic. en enfermería</option>
+				</select> 
+			</div>
+			
+			<h7>Turno</h7>
+			<form action="" class="mt-2">
+				<div class="custom-control custom-control-inline custom-radio">
+					<input type="radio" name="turno" id="tmm" value="tm" class="custom-control-input"> 	
+					<label for="tmm" class="custom-control-label">Turno Matutino</label>					
+				</div>
+				<div class="custom-control custom-control-inline custom-radio">	
+					<input type="radio" name="turno" id="tvv" value="tv" class="custom-control-input">
+					<label for="tvv" class="custom-control-label">Turno Vespertino</label>		
+				</div>
+				<div class="custom-control custom-control-inline custom-radio">
+					<input type="radio" name="turno" id="att" value="at" class="custom-control-input">
+					<label for="att" class="custom-control-label">Ambos Turnos</label>		
+				</div>
+			</form>
+
+			<hr>
+			<h7>Sexo</h7>
+			<form action="" class="mt-2">
+				<div class="custom-control custom-control-inline custom-radio">
+					<input type="radio" name="sexo" id="hh" value="h" class="custom-control-input"> 	
+					<label for="hh" class="custom-control-label">Hombre</label>					
+				</div>
+				<div class="custom-control custom-control-inline custom-radio">
+					<input type="radio" name="sexo" id="mm" value="m" class="custom-control-input">
+					<label for="mm" class="custom-control-label">Mujer</label>		
+				</div>
+				<div class="custom-control custom-control-inline custom-radio">
+					<input type="radio" name="sexo" id="aa" value="a" class="custom-control-input">
+					<label for="aa" class="custom-control-label">Ambos</label>		
+				</div>
+			</form>
+
+				<hr>
+				<div class="d-flex justify-content-end">
+					<input type="submit" value="Generar Reporte" class="btn btn-primary justify-content-end mb-3">
+				</div>
+				<div class="tab-pane fade show" id="carrera" role="tabpanel" aria-labelledby="carrera">
+					
+				</div>
+		</div>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="../js/popper.min.js.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+</body>
+</html>
