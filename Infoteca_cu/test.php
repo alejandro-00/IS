@@ -1,5 +1,5 @@
 <?php
-include 'connection.php';
+include 'querys.php';
 ?>
 
 <html>
@@ -14,13 +14,10 @@ include 'connection.php';
     </head>
     <body>
         <div class="col-3 registro-contenedor mt-3">
-        <p class="alert alert-info text-center mt-5">Ingresa tu matrícula manualmente.</p>
-            <input type="radio" name="date" value="date"> Fecha<br>
-            <input type="radio" name="school" value="school"> Escuela<br>
-            <input type="radio" name="other" value="other"> Other<br>
             <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                 Fecha inicio: <input type="date" name="date_s" value="<?php echo $date_s;?>">
                 Fecha final: <input type="date" id="date_f" name="date_f" value="<?php echo $date_f;?>">
+                Matricula: <input type="text" id="id" name="id" value="<?php echo $id?>">
                 <input type="submit" name="submit" value="Enviar">
             </form>
         </div>
