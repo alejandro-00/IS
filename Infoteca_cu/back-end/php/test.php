@@ -21,14 +21,21 @@ include 'querys.php';
                 <input type="submit" name="submit" value="Enviar">
             </form>
         </div>
-        <table>
-            <tr><td>Name</td><td>City</td><td>Year</td></tr>
+        <table border="1">
+            <tr><td>Matricula</td><td>Nombre</td><td>Apellido Pat</td><td>Apellido Mat</td><td>Sexo</td><td>Carrera</td><td>Escuela</td></tr>
             <?php
-                foreach($results as $k => $result) {
+echo '<pre>';
+print_r($results);
+echo '</pre>';
+                foreach($results as $key => $result) {
                     echo "<tr>";
-                    foreach($result as $a) {
-                        echo "<td>$a </td>";
-                    }
+                    echo "<td>";echo $result["MATRICULA"];echo "</td>";
+                    echo "<td>";echo $result["NOMBRE"];echo "</td>";
+                    echo "<td>";echo $result["PATERNO"];echo "</td>";
+                    echo "<td>";echo $result["MATERNO"];echo "</td>";
+                    echo "<td>";echo $result["SEXO"];echo "</td>";
+                    echo "<td>";echo "<a href='localhost:81/front-end/registro/matricula-registro.html'>"; echo $result["N_C"]; echo "</a>"; echo "</td>";
+                    echo "<td>";echo $result["N_ESC"];echo "</td>";
                     echo "</tr>";
                 }?>
         </table>

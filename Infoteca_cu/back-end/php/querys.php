@@ -6,14 +6,8 @@ $id;
 $date_s;
 $date_f;
 
-$stbd = $conn->prepare("select concat(FirstName,' ', LastName) as Full_name, City, year(HireDate) as year from employees where HireDate between ? and ?;");
-$stbd->bindParam(1, $date_s);
-$stbd->bindParam(2, $date_f);
-$stbd->setFetchMode(PDO::FETCH_ASSOC);
-    $stbd->execute();
-    $results = $stbd->fetchAll();
-
-$stbi = $conn->prepare("select concat(FirstName,' ', LastName) as Full_name, City, year(HireDate) as year from employees where employeeid = ?;");
+//$stbi = $conn->prepare("select MATRICULA,concat(NOMBRE,' ', PATERNO) as Full_name, SEXO from alumnos where MATRICULA = ?;");
+$stbi = $conn->prepare("CALL ALM(?)");
 $stbi->bindParam(1, $id);
 $stbi->setFetchMode(PDO::FETCH_ASSOC);
 
