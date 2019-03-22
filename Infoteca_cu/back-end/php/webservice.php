@@ -13,6 +13,8 @@ $results = $stbi->fetchAll();
 //print_r($results);
 echo json_encode($results);
 
+$conn=null;
+
 /*
 $sql = "CALL ALM(".$MAT.")";
 $stmt= $conn->query($sql);
