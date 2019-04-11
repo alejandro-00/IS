@@ -7,7 +7,7 @@
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css">
 	<link rel="icon" type="image/png" href="../imagenes/icono-pagina/favicons.png">
 	<link rel="stylesheet" type="text/css" href="../style/estilo-pagina.css">
-	<title>Registro externos - Infoteca CU</title>
+	<title>Registro con Matrícula - Infoteca CU</title>
 </head>
 <body>
 <!-- Contenedor principal -->	
@@ -52,48 +52,37 @@
 		</div>
 	</div>
 </div>
-<!-- Sección de botones para el registro -->
+		<!-- Sección de botones para el registro -->
 <div class="container-fluid mt-3">
 	<div class="row">
 		<div class="col-8 mr-3 ml-5 p-0" id="contenedor-campos-ingreso">
 		<div class="col-12 registro-col-cen d-flex justify-content-center"> 
 			<div class="col-10">
-				<p class="alert alert-info text-center mt-5">Ingresa tus datos.</p>
-				<form id="formExtRegi">
-					<div class="form-row">
-  					  <div class="form-group col-md-4">
-  					    <input type="text" class="form-control form-control-sm" id="nomb" placeholder="Nombre">
-  					  </div>
-  					  <div class="form-group col-md-4">
-  					    <input type="text" class="form-control form-control-sm" id="pate" placeholder="Apellido Paterno">
-  					  </div>
-  					  <div class="form-group col-md-4">
-  					    <input type="text" class="form-control form-control-sm" id="mate" placeholder="Apellido Materno">
-  					  </div>
-  					</div>
-				<input type="text" class="form-control form-control-sm" name="" placeholder="Ocupación" id="ocup">
-				<input type="tel" class="form-control form-control-sm mt-3" name="" placeholder="Teléfono" id="tele">
-				<input type="text" class="form-control form-control-sm mt-3" name="" placeholder="Institución" id="inst">
-				<div class="mb-4">
-				<button type="button" class="btn btn-success mt-3" onclick="validacionCamposExternos()">Enviar</button>
-				<button type="button" class="btn btn-warning mt-3" onclick="borrarCamposMatriculaExternos()">Limpiar</button>
-				</div>
-			</form>
-				<div class="alert-roja" style="display: none;" id="alertaNombre"></div>
-				<div class="alert-roja" style="display: none;" id="alertaPaterno"></div>
-				<div class="alert-roja" style="display: none;" id="alertaMaterno"></div>
-				<div class="alert-roja" style="display: none;" id="alertaOcupacion"></div>
-				<div class="alert-roja" style="display: none;" id="alertaTelefono"></div>
-				<div class="alert-roja" style="display: none;" id="alertaInstituto"></div>			
+				<form id="formMatrIngr">
+					<p class="alert alert-info text-center mt-5">Pasa tu credencial por el escáner.</p>
+					<input type="text" class="form-control form-control-sm" name="" placeholder="Credencial" id="mat" maxlength="8">
+					<div class="mb-4">
+					</div>
+					<div class="alert-roja text-center" style="display: none;" id="alertanula"> 
+					</div>
+					<div class="alert-amarilla text-center" style="display: none;" id="alertamenor">
+					</div>			
+				</form>
 			</div>
 		</div>
-	</div>		
-<!-- Aside -->
-	<div class="col-3 ml-3">
-		<img src="../imagenes/gif/gif-aside.gif" class="gif-cen-der">
+		</div>	
+<div class="col-8 mr-3 ml-5 p-0 contenedor-cards-t"  id="contenedor-card-alumno" style="display: none;">
+
+	
+</div>
+		<!-- Aside -->
+		<div class="col-2 ml-3">
+			<img src="../imagenes/gif/gif-aside.gif" class="gif-cen-der" id="gif-as">
+		</div>	
 	</div>
 </div>
-</div>	
+
+
 		<!-- Footer -->
 <div class="container-fluid mt-3">
 	<div class="row container-footer-sup d-flex justify-content-center align-items-center">
@@ -149,8 +138,9 @@
 		</div>
 	</div>
 </div>
-	<script src="../javascript/validacionIngreso.js"></script>
-	<script src="../javascript/borrarCampos.js"></script>
+	<script src="../javascript/regresarContenedor.js"></script>
+	<script src="../javascript/wsprueba.js"></script>
+		<script src="../javascript/borrarCampos.js"></script>
 	<script src="../js/jquery-3.3.1.min.js"></script>
 	<script src="../js/popper.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>

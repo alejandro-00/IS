@@ -5,44 +5,57 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-	<link rel="icon" type="image/png" href="imagenes/icono-pagina/favicons.png">
-	<link rel="stylesheet" type="text/css" href="style/pagina-principal.css">
-	<title>Sistema de Registro - Infoteca CU</title>
+	<link rel="stylesheet" type="text/css" href="style/estilo-pagina.css">
+	<title>Sistema de Registro - Infocateca CU</title>
 </head>
 <body>
 <!-- Contenedor principal -->	
 <div class="container-fluid">
-	<div class="row">
-		<div class="col-6 header d-flex justify-content-end">
-		</div>
-			<div class="col-3 header">	
-			</div>
-				<div class="col-3 header d-flex justify-content-end">
-					<table>
-						<thead>
-							<th></th>
-						</thead>
-							<tr>
-								<td class="tabla-elementos"><a href="#"><img src="imagenes/lang/es.png"></a></td>
-								<td class="tabla-elementos"><a href="#"><img src="imagenes/lang/en.png"></a></td>
-								<td class=""><a href="login/login.html" class="badge badge-pill badge-light">Iniciar Sesión</a></td>
-							</tr>
-					</table>
-				</div>
+	<div class="row container-header-sup d-flex justify-content-center align-items-center">
+		<div class="col-3 header-col-sup">
+			<h2 class="encabezado-infoteca text-center mr-4">INFOTECA CAMPUS ARTEAGA</h2>
+		<!--	<table>
+				<thead>
+					<th></th>
+				</thead>
+				<tr>
+					<td class="tabla-elementos"><a href="#"><img src="../imagenes/lang/es.png"></a></td>
+					<td class="tabla-elementos"><a href="#"><img src="../imagenes/lang/en.png"></a></td>
+				</tr>
+			</table>
+	--></div>
+	</div>
+</div>
 		<!-- Logotipo UAdeC situado en el nav -->
-		<div class="nav col-12 d-flex justify-content-center">
-			<a href="infoteca-cu.html"><img src="imagenes/logotipo-nav/logo.png" class="logo-class"></a>
-			<h6 class="texto-logo">INFOTECA - CAMPUS ARTEAGA</h6>
+<div class="container-fluid">
+	<div class="row container-header-inf d-flex align-items-center">
+		<div class="col-4 header-col-inf-1 text-center d-flex justify-content-end ">
+			<ul class="">
+				<li class="mr-5 animacion-banderas"><a href="#"><img src="imagenes/lang/es.png"></a></li>
+				<li class="mr-5 animacion-banderas"><a href="#"><img src="imagenes/lang/en.png"></a></li>
+			</ul>
+				<div class="dropdown show">	
+				<a href="#" class="a-registro dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+				 	<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+   						 <a class="a-dropdownmenu dropdown-item" href="registro/registrar-visita.html">Credencial</a>
+   						 <a class="a-dropdownmenu dropdown-item" href="registro/externos-registro.html">Externos</a>
+ 					 </div>
+ 				</div>
 		</div>
+		<div class="col-4 header-col-inf-2">
+			<ul class="">
+				<li class="ml-5"><a href="infoteca-cu.html"><img src="imagenes/logotipo-nav/logo.png" width="192" height="72"></a></li>
+			</ul>
+		</div>
+		<div class="col-4 header-col-inf-2">
+		</div>
+	</div>
+</div>
 		<!-- Sección de botones para el registro -->
-		<div class="tabla-botones col-2 mt-3">	
-			<a href="registro/credencial-registro.html" class="botones-registro btn btn-primary btn-sm btn-block">CREDENCIAL</a>
-			<a href="registro/matricula-registro.html" class="botones-registro btn btn-primary btn-sm btn-block">MATRÍCULA</a>
-			<a href="" class="botones-registro btn btn-primary btn-sm btn-block">INVESTIGADORES</a>
-			<a href="registro/externos-registro.html" class="botones-registro btn btn-primary btn-sm btn-block">EXTERNOS</a>
-		</div>
+<div class="container-fluid mt-3">
+	<div class="row">
 		<!-- Imagen de FONDO Infoteca -->
-		<div class="col-10">
+		<div class="col-6">
 			<table>
 				<thead>
 					<tr>
@@ -52,30 +65,71 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td><img src="imagenes/background/fondo.jpg" class="img-fondo img-fluid mt-3"></td>
+						<td><img src="imagenes/background/fondo.jpg" class="img-cen-der-prin img-fluid"></td>
 					</tr>
 				</tbody>
 			</table>
 		</div>
+	</div>
+</div>
 		<!-- Footer -->
-		<div class="footer-eslogan col-12 mt-3">
-			<h4 class="texto-eslogan text-center"><i>"EN EL BIEN, FINCAMOS EL SABER".</i></h4>
+<div class="container-fluid mt-3">
+	<div class="row container-footer-sup d-flex justify-content-center align-items-center">
+		<div class="col-5 footer-col-sup">
+			<p class="p-text-footer text-center">"EN EL BIEN, FINCAMOS EL SABER".</p>
 		</div>
-		<footer class="footer-info col-3 d-flex justify-content-end">
-			<span class="texto-footer telefono-elemento"> 01(844)411-1400 | 411-1401</span>
-		</footer>
-		<footer class="footer-info col-5 d-flex justify-content-end">
-				<span class="texto-footer ubicacion-elemento"> Carreta 57 km. 13. Ciudad Universitaria. Arteaga, Coahuila.</span>
-		</footer>
-		<footer class="footer-info col-4 d-flex justify-content-center">
-				<span class="texto-footer horario-elemento"> L-V de 8:00 a.m. a 9:00 p.m.</span>
-		</footer>
+	</div>
+	<div class="row container-footer-inf">
+		<div class="col-4 d-flex justify-content-center align-items-center">
+		<table class="">
+			<thead>
+    			<tr>
+    				<th scope="col" class="th-text-footer text-center">CONTÁCTANOS</th>
+    			</tr>
+  			</thead>
+  			<tbody>
+    			<tr>
+      				<th scope="row" class="tb-text-footer">01(844)411-1400 | 411-1401</th>
+      			</tr>
+      		 </tbody>
+			</table>
+			<!--<span class="texto-footer telefono-elemento" id="tel-element">01(844)411-1400 | 411-1401</span>-->
+		</div>
+		<div class="footer-info col-4 d-flex justify-content-center align-items-center">
+			<table class="">
+			<thead>
+    			<tr>
+    				<th scope="col" class="th-text-footer text-center">UBICACIÓN</th>
+    			</tr>
+  			</thead>
+  			<tbody>
+    			<tr>
+      				<th scope="row" class="tb-text-footer">Carretera 57 km. 13. Ciudad Universitaria. Arteaga, Coahuila.</th>
+      			</tr>
+      		 </tbody>
+			</table>
+			<!--<span class="texto-footer ubicacion-elemento">Carreta 57 km. 13. Ciudad Universitaria. Arteaga, Coahuila.</span>-->
+		</div>
+		<div class="footer-info col-4 d-flex justify-content-center align-items-center">
+			<table class="">
+			<thead>
+    			<tr>
+    				<th scope="col" class="th-text-footer text-center">HORARIO</th>
+    			</tr>
+  			</thead>
+  			<tbody>
+    			<tr>
+      				<th scope="row" class="tb-text-footer">L-V de 8:00 a.m. a 9:00 p.m.</th>
+      			</tr>
+      		 </tbody>
+			</table>
+			<!--<span class="texto-footer horario-elemento">L-V de 8:00 a.m. a 9:00 p.m.</span>-->
+		</div>
 	</div>
 </div>
 
-</div>
 	<script src="js/jquery-3.3.1.min.js"></script>
-	<script src="js/popper.min"></script>
+	<script src="js/popper.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -1,0 +1,182 @@
+body{
+	background: #EDE8E8;
+	padding: 0px;
+	}
+
+/* Implementación de fuentes personalizadas */
+
+@font-face{
+	font-family: "RobotoSlab";
+	src: url("fuentes/RobotoSlab.ttf");
+		  }
+@font-face{
+	font-family: "JuliusSans";
+	src: url("fuentes/JuliusSans.ttf");
+		  }
+
+/* Medidas-Columnas */
+
+.header-col-sup{
+	height: 20px;
+		   }
+.header-col-inf-1{
+	height: 30px;
+		         }
+.header-col-inf-2{
+	height: 70px;
+		         }
+.panel-col-izq, .registro-col-cen, .gif-aside{
+	background: white;
+	-webkit-box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.25);
+	-moz-box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.25);
+	box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.25); 
+			  }
+.registro-col-cen{
+	border-radius: 3px;
+	height: 540px;
+				 }
+.registro-col-int-cen{
+	background: #A2ADFE;
+	height: 40px;
+					 }
+.footer-col-sup{
+	height: 20px;
+			   }
+
+/* Textos personalizados */
+
+.encabezado-infoteca{
+	font-family: 'RobotoSlab';
+	font-size: 13px;
+		            }
+
+
+/* Contenedores */
+
+.container-header-sup{
+	background: #EDB621;
+	height: 30px;
+					 }
+.container-header-inf{
+	background: white;
+	height: 70px;
+	-webkit-box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.33);
+	-moz-box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.33);
+	box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.33); 
+				     }
+.container-footer-sup{
+	background: #171616;
+	height: 30px;
+			}
+.container-footer-inf{
+	background: #000000;
+	height: 80px;
+					 }
+
+/* Alertas personalizadas */
+
+.alert-roja{
+	font-family: RobotoSlab;
+	font-size: 14px;
+	color: white;
+	background: #E84C4C;
+	border: 1px solid #F47070;
+	border-radius: 3px;
+}
+.espacio-alerta{
+	margin: 50px;
+}
+
+/* Contenedor Información */
+.card-alumno{
+/* Horizontal, Vertical, Difuminado, tamaño, color. */
+box-shadow: 0 -10px 0px 0px rgba(108,123,238,1);
+border-top-right-radius: 2px;
+border-top-left-radius: 2px;
+
+-webkit-box-shadow: 0px 10px 3px -5px rgba(0,0,0,0.33);
+	-moz-box-shadow: 0px 10px 3px -5px rgba(0,0,0,0.33);
+	box-shadow: 0px 10px 3px -5px rgba(0,0,0,0.33); 
+height: 350px;
+}
+.titulo-informacion-ingreso{
+	font-family: 'RobotoSlab';
+	font-size: 15px;
+		            }
+.informacion-ingreso{
+	font-family: 'RobotoSlab';
+	font-size: 12px;
+		            }
+
+/* Animaciones */
+/* Animación: Banderas */
+
+.animacion-banderas:hover{
+	transform: rotate(360deg);
+	-webkit-transform: rotate(360deg);
+	transition: 1s all;
+						 }
+/* Botones personalizados */
+.ahref-bot-izq{
+	background: #2e5790;
+	font-size: 15px;
+			  }
+
+/* Gif-Cen-Der */
+
+.gif-cen-der{
+	border-radius: 2px;
+	height: 540px;
+	width: 300px;
+		    }
+
+/* Imagen-Cen-Der-Principal */
+
+.img-cen-der-prin{
+	border-radius: 2px;
+}
+
+/* Unordered List Elemento */
+
+.a-registro::before{
+ content: "REGISTRO ";
+  color: black;
+  font-family: "JuliusSans";
+ transition: all 1s;
+}
+.a-dropdownmenu{
+	color: black;
+	font-family: "JuliusSans";
+}
+
+/* Fuentes */ 
+
+.tabla-botones{
+	border: 1px solid black;
+}
+.th-text-footer{
+	font-size: 15px;
+	font-family: "Open Sans";
+	color: white;
+}
+.tb-text-footer{
+	font-size: 13px;
+	font-family: "RobotSlab";
+	color: #EDE9E9;
+}
+.p-text-footer{
+	font-family: 'RobotoSlab';
+	color: white;
+	font-size: 14px;
+			 }
+			 
+/* Cambio a etiquetas HTML */ 
+
+li { display: inline-block; }
+
+/* Pruebas */ 
+
+.contenedor-cards-t{
+	height: 540px;
+	background: white;
+}

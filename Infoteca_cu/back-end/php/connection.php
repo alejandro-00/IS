@@ -1,9 +1,9 @@
 <?php
 
     $servername = "localhost";
-    $username = "mariomanza";
-    $password = "sexymexy45!";
-    $dbname = "northwind";
+    $username = "root";
+    $password = "";
+    $dbname = "registro";
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -12,4 +12,9 @@ try {
         echo "Connection failed: " . $e->getMessage();
     }
 
+    /*$conn = new mysqli($servername, $username, $password, $dbname);
+    #prepared statement for query by date range
+    if ($conn->connect_error){
+        die("Connection failed: " . $conn->connect_error);
+    }*/
 ?>
