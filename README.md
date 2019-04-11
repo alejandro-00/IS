@@ -5,10 +5,12 @@ Repositorio de la materia de Ingeniería de Software ENE-JUL 2019.
 # Integrantes del equipo
 
 ## Administrador de proyecto
-Angela Sanchez Niño
+[Angela Gabriela Sanchez Niño](https://github.com/a-sanchez)
 
 ## Testers
-Jonathan Ivan Aguilar Cedillo
+[Jonathan Ivan Aguilar Cedillo](https://github.com/Jonathan-aguilar)
+
+Brandon Emmanuel Delabra Salinas
 
 ## Programadores
 [Guadalupe Alejandro Pérez Camacho](https://github.com/alejandro-00)
@@ -17,6 +19,8 @@ Jonathan Ivan Aguilar Cedillo
 
 ## Arquitectos
 Emilio Barrera González
+
+Luis Fernando Garcia Morales
 
 [Jesús Ángel Rodríguez Martínez](https://github.com/martinez-angel)
 
