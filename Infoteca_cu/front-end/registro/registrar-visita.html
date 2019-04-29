@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -9,13 +10,14 @@
 	<link rel="stylesheet" type="text/css" href="../style/estilo-pagina.css">
 	<title>Registro con Matrícula - Infoteca CU</title>
 </head>
+
 <body>
-<!-- Contenedor principal -->	
-<div class="container-fluid">
-	<div class="row container-header-sup d-flex justify-content-center align-items-center">
-		<div class="col-3 header-col-sup">
-			<h2 class="encabezado-infoteca text-center mr-4">INFOTECA CAMPUS ARTEAGA</h2>
-		<!--	<table>
+	<!-- Contenedor principal -->
+	<div class="container-fluid p-0">
+		<div class="row container-header-sup d-flex justify-content-center align-items-center">
+			<div class="col-4 d-flex aling-items-center justify-content-center">
+				<span class="encabezado-infoteca">INFOTECA CAMPUS ARTEAGA</span>
+				<!--	<table>
 				<thead>
 					<th></th>
 				</thead>
@@ -24,125 +26,125 @@
 					<td class="tabla-elementos"><a href="#"><img src="../imagenes/lang/en.png"></a></td>
 				</tr>
 			</table>
-	--></div>
-	</div>
-</div>
+	-->
+			</div>
+		</div>
+
 		<!-- Logotipo UAdeC situado en el nav -->
-<div class="container-fluid">
-	<div class="row container-header-inf d-flex align-items-center">
-		<div class="col-4 header-col-inf-1 text-center d-flex justify-content-end ">
-			<ul class="">
-				<li class="mr-5 animacion-banderas"><a href="#"><img src="../imagenes/lang/es.png"></a></li>
-				<li class="mr-5 animacion-banderas"><a href="#"><img src="../imagenes/lang/en.png"></a></li>
-			</ul>
-			<div class="dropdown show">	
-				<a href="#" class="a-registro dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
-				<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-					<a class="a-dropdownmenu dropdown-item" href="registrar-visita.html">Credencial</a>
-					<a class="a-dropdownmenu dropdown-item" href="externos-registro.html">Externos</a>
+		<div class="row container-header-inf d-flex align-items-center">
+			<div class="col-4 header-col-inf-1 text-center d-flex justify-content-end ">
+				<ul class="">
+					<li class="mr-5 animacion-banderas"><a href="#"><img src="../imagenes/lang/es.png"></a></li>
+					<li class="mr-5 animacion-banderas"><a href="#"><img src="../imagenes/lang/en.png"></a></li>
+				</ul>
+				<div class="dropdown show">
+					<a href="#" class="a-registro dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+					<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+						<a class="a-dropdownmenu dropdown-item" href="registrar-visita.html">Credencial</a>
+						<a class="a-dropdownmenu dropdown-item" href="externos-registro.html">Externos</a>
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="col-4 header-col-inf-2">
-			<ul class="">
-				<li class="ml-5"><a href="registrar-visita.html"><img src="../imagenes/logotipo-nav/logo.png" width="192" height="72"></a></li>
-			</ul>
-		</div>
-		<div class="col-4 header-col-inf-2">
-		</div>
-	</div>
-</div>
-		<!-- Sección de botones para el registro -->
-<div class="container-fluid mt-3">
-	<div class="row">
-		<div class="col-8 mr-3 ml-5 p-0" id="contenedor-campos-ingreso">
-		<div class="col-12 registro-col-cen d-flex justify-content-center"> 
-			<div class="col-10">
-				<form id="formMatrIngr">
-					<p class="alert alert-info text-center mt-5">Pasa tu credencial por el escáner.</p>
-					<input type="text" class="form-control form-control-sm" name="" placeholder="Credencial" id="mat" maxlength="8">
-					<div class="mb-4">
-					</div>
-					<div class="alert-roja text-center" style="display: none;" id="alertanula"> 
-					</div>
-					<div class="alert-amarilla text-center" style="display: none;" id="alertamenor">
-					</div>			
-				</form>
+			<div class="col-4 header-col-inf-2">
+				<ul class="">
+					<li class="ml-5"><a href="registrar-visita.html"><img src="../imagenes/logotipo-nav/logo.png" width="192" height="72"></a></li>
+				</ul>
+			</div>
+			<div class="col-4 header-col-inf-2">
 			</div>
 		</div>
-		</div>	
-<div class="col-8 mr-3 ml-5 p-0 contenedor-cards-t"  id="contenedor-card-alumno" style="display: none;">
+		<!-- Sección de botones para el registro -->
 
-	
-</div>
-		<!-- Aside -->
-		<div class="col-2 ml-3">
-			<img src="../imagenes/gif/gif-aside.gif" class="gif-cen-der" id="gif-as">
-		</div>	
-	</div>
-</div>
+		<div class="row mt-3 p-2" id="contenedor-campos-padre">
+			<div class="col-8" id="contenedor-campos-hijo">
+				<div class="col-12 registro-col-cen d-flex justify-content-center">
+					<div class="col-8 p-2">
+						<form id="formMatrIngr" class="form-group">
+							<div class="alert alert-info text-center mt-5">
+								Pasa tu credencial por el escáner.
+							</div>
+
+							<input type="text" class="form-control form-control-sm" name="" placeholder="Credencial" id="mat" maxlength="8">
+						</form>
+						<div class="col-12 alerta-error text-center p-0" id="alerta-error" style="visibility: hidden;">
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+			<!-- Aside -->
+			<div class="col-4" id="gif-as">
+				<img src="../imagenes/gif/gif-aside.gif" class="gif-cen-der img-fluid img-responsive">
+			</div>
+		</div>
+
 
 
 		<!-- Footer -->
-<div class="container-fluid mt-3">
-	<div class="row container-footer-sup d-flex justify-content-center align-items-center">
-		<div class="col-5 footer-col-sup">
-			<p class="p-text-footer text-center">"EN EL BIEN, FINCAMOS EL SABER".</p>
+		<div class="row container-footer-sup d-flex justify-content-center align-items-center p-0">
+			<div class="col-12 d-flex justify-content-center">
+				<div class="col-5 footer-col-sup">
+					<p class="p-text-footer text-center">"EN EL BIEN, FINCAMOS EL SABER".</p>
+				</div>
+			</div>
+		</div>
+		<div class="row container-footer-inf p-0">
+			<div class="col-4 d-flex justify-content-center align-items-center">
+				<table class="">
+					<thead>
+						<tr>
+							<th scope="col" class="th-text-footer text-center">CONTÁCTANOS</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row" class="tb-text-footer">01(844)411-1400 | 411-1401</th>
+						</tr>
+					</tbody>
+				</table>
+				<!--<span class="texto-footer telefono-elemento" id="tel-element">01(844)411-1400 | 411-1401</span>-->
+			</div>
+			<div class="footer-info col-4 d-flex justify-content-center align-items-center">
+				<table class="">
+					<thead>
+						<tr>
+							<th scope="col" class="th-text-footer text-center">UBICACIÓN</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row" class="tb-text-footer">Carretera 57 km. 13. Ciudad Universitaria. Arteaga, Coahuila.</th>
+						</tr>
+					</tbody>
+				</table>
+				<!--<span class="texto-footer ubicacion-elemento">Carreta 57 km. 13. Ciudad Universitaria. Arteaga, Coahuila.</span>-->
+			</div>
+			<div class="footer-info col-4 d-flex justify-content-center align-items-center">
+				<table class="">
+					<thead>
+						<tr>
+							<th scope="col" class="th-text-footer text-center">HORARIO</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row" class="tb-text-footer">L-V de 8:00 a.m. a 9:00 p.m.</th>
+						</tr>
+					</tbody>
+				</table>
+				<!--<span class="texto-footer horario-elemento">L-V de 8:00 a.m. a 9:00 p.m.</span>-->
+			</div>
 		</div>
 	</div>
-	<div class="row container-footer-inf">
-		<div class="col-4 d-flex justify-content-center align-items-center">
-		<table class="">
-			<thead>
-				<tr>
-					<th scope="col" class="th-text-footer text-center">CONTÁCTANOS</th>
-				</tr>
-			</thead>
-			<tbody>
-				<tr>
-					<th scope="row" class="tb-text-footer">01(844)411-1400 | 411-1401</th>
-				</tr>
-			</tbody>
-			</table>
-			<!--<span class="texto-footer telefono-elemento" id="tel-element">01(844)411-1400 | 411-1401</span>-->
-		</div>
-		<div class="footer-info col-4 d-flex justify-content-center align-items-center">
-			<table class="">
-				<thead>
-					<tr>
-						<th scope="col" class="th-text-footer text-center">UBICACIÓN</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th scope="row" class="tb-text-footer">Carretera 57 km. 13. Ciudad Universitaria. Arteaga, Coahuila.</th>
-					</tr>
-				</tbody>
-			</table>
-			<!--<span class="texto-footer ubicacion-elemento">Carreta 57 km. 13. Ciudad Universitaria. Arteaga, Coahuila.</span>-->
-		</div>
-		<div class="footer-info col-4 d-flex justify-content-center align-items-center">
-			<table class="">
-				<thead>
-					<tr>
-						<th scope="col" class="th-text-footer text-center">HORARIO</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<th scope="row" class="tb-text-footer">L-V de 8:00 a.m. a 9:00 p.m.</th>
-					</tr>
-				</tbody>
-			</table>
-			<!--<span class="texto-footer horario-elemento">L-V de 8:00 a.m. a 9:00 p.m.</span>-->
-		</div>
-	</div>
-</div>
+
 	<script src="../javascript/regresarContenedor.js"></script>
 	<script src="../javascript/wsprueba.js"></script>
-		<script src="../javascript/borrarCampos.js"></script>
+	<script src="../javascript/borrarCampos.js"></script>
 	<script src="../js/jquery-3.3.1.min.js"></script>
 	<script src="../js/popper.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
 </body>
+
 </html>

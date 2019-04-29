@@ -16,9 +16,6 @@ body{
 
 /* Medidas-Columnas */
 
-.header-col-sup{
-	height: 20px;
-		   }
 .header-col-inf-1{
 	height: 30px;
 		         }
@@ -29,16 +26,13 @@ body{
 	background: white;
 	-webkit-box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.25);
 	-moz-box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.25);
-	box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.25); 
+	box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.25);
 			  }
 .registro-col-cen{
 	border-radius: 3px;
 	height: 540px;
 				 }
-.registro-col-int-cen{
-	background: #A2ADFE;
-	height: 40px;
-					 }
+
 .footer-col-sup{
 	height: 20px;
 			   }
@@ -62,7 +56,7 @@ body{
 	height: 70px;
 	-webkit-box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.33);
 	-moz-box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.33);
-	box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.33); 
+	box-shadow: 0px 1px 15px -5px rgba(0,0,0,0.33);
 				     }
 .container-footer-sup{
 	background: #171616;
@@ -96,7 +90,7 @@ border-top-left-radius: 2px;
 
 -webkit-box-shadow: 0px 10px 3px -5px rgba(0,0,0,0.33);
 	-moz-box-shadow: 0px 10px 3px -5px rgba(0,0,0,0.33);
-	box-shadow: 0px 10px 3px -5px rgba(0,0,0,0.33); 
+	box-shadow: 0px 10px 3px -5px rgba(0,0,0,0.33);
 height: 350px;
 }
 .titulo-informacion-ingreso{
@@ -127,7 +121,6 @@ height: 350px;
 .gif-cen-der{
 	border-radius: 2px;
 	height: 540px;
-	width: 300px;
 		    }
 
 /* Imagen-Cen-Der-Principal */
@@ -149,7 +142,7 @@ height: 350px;
 	font-family: "JuliusSans";
 }
 
-/* Fuentes */ 
+/* Fuentes */
 
 .tabla-botones{
 	border: 1px solid black;
@@ -169,14 +162,22 @@ height: 350px;
 	color: white;
 	font-size: 14px;
 			 }
-			 
-/* Cambio a etiquetas HTML */ 
+
+/* Cambio a etiquetas HTML */
 
 li { display: inline-block; }
 
-/* Pruebas */ 
+/* Pruebas */
 
 .contenedor-cards-t{
 	height: 540px;
 	background: white;
+}
+
+.alerta-error {
+border-radius: 2px;
+font-size: 14px;
+	background: #C13232;
+border: 1px solid #AC1E1E;
+color: #fff;
 }
