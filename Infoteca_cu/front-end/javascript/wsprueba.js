@@ -1,4 +1,4 @@
-//Evento que nos permite estar a la escucha del scaner.
+﻿//Evento que nos permite estar a la escucha del scaner.
 var inputEnter = document.getElementById("mat");
 var contenedor_errores = document.getElementById("alerta-error");
 var contenedorCamposPadre = document.getElementById("contenedor-campos-padre");
@@ -169,7 +169,6 @@ function validaCampos() {
     });
 
   }
-
 }
 
 
