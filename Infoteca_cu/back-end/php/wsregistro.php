@@ -3,7 +3,11 @@ include 'connection.php';
 
 //recibe json {MAT INT,NA STRING,AP STRING,AM STRING,NC STRING,NF STRING,LL INT,T INT}
 $json=json_decode($_GET["ALUMNO"],false);
+<<<<<<< HEAD
 $result=[];
+=======
+$result[];
+>>>>>>> 3689c712cc0e16c2307cd79fa99b927660ebb02d
 try{
     $stbi = $conn->prepare("CALL registrar(?,?,?,?,?,?,?,?)");
     $stbi->bindParam(1,$json->MAT);
@@ -21,7 +25,11 @@ try{
         //if true
         $result[0]=1;
         $result[1]="Registro exitoso";
+<<<<<<< HEAD
         echo $json=json_encode($result[1]);
+=======
+        echo $json=json_encode($result[])
+>>>>>>> 3689c712cc0e16c2307cd79fa99b927660ebb02d
     }
 }
 catch(PDOException $e){
@@ -32,4 +40,8 @@ catch(PDOException $e){
 
 $conn=null;
 
+<<<<<<< HEAD
 ?>
+=======
+?>
+>>>>>>> 3689c712cc0e16c2307cd79fa99b927660ebb02d
