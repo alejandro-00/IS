@@ -1,11 +1,11 @@
 var inputEnter= document.getElementById("mat");
 
 inputEnter.addEventListener("keydown", function(event) {
-  if (event.keyCode === 13){
-      event.preventDefault();
-      validaCampos();
-                            }
-                                                       });
+    if (event.keyCode === 13){
+        event.preventDefault();
+        validaCampos();
+    }
+});
 
 
 function validaCampos() {
@@ -32,13 +32,13 @@ function validaCampos() {
         var mydata = $();
         $.ajaxSetup({async: true});            
         $.ajax({
-               url: '../../back-end/php/webservice.php',                        
-               data: {
-                     matricula: matricula
-                     },
-                     dataType: 'json',
-                     type: 'GET', 
-                     success: function(data){
+            url: '../../back-end/php/webservice.php',                        
+            data: {
+                matricula: matricula
+            },
+            dataType: 'json',
+            type: 'GET', 
+            success: function(data){
                 if(data == ''){
                     cardAlumno.style.display = "none";
                     alerta.style.display = "none";   
@@ -54,7 +54,7 @@ function validaCampos() {
                 institutoEstudiante.innerHTML = data[x].N_E;
                 cursaEstudiante.innerHTML = data[x].N_C;
                 matriculaEstudiante.innerHTML = data[x].MATRICULA;
-                               }
+            }
                 cardAlumno.style.display = "initial";
                 }            
             },
@@ -79,5 +79,5 @@ var validacionLength = validacionSanada.length;
     if(validacionLength == 0){
         alertanula.innerHTML = "Pasa tu credencial por el escáner o escribe tu matrícula/número de expendiente.";
         alertanula.style.display = "initial ";
-                             }
-                    }
+    }
+}

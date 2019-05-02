@@ -213,11 +213,12 @@ function registrarVisita(mat, na, ap, am, nc, nf) {
     "LL": llave,
     "T": turno
   };
-  //JSON.stringify(ALUMNO); 
+  var data = JSON.stringify(ALUMNO); 
   console.log(ALUMNO);
+  console.log(data);
   $.ajax({
-    url: '../../back-end/php/wsregistro.php',
-    data: ALUMNO,
+    url: '../../back-end/php/wsregistro.php?x=',
+    data:{ x: data},
     dataType: 'json',
     type: 'GET',
     success: function(data) {
