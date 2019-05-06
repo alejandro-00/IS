@@ -1,6 +1,9 @@
 <?php
 include 'connection.php';
 
+/*if($_SESSION['userid']==''){
+	die('Invalid');
+}*/
 
 $results;
 $MAT = $_GET["matricula"];
