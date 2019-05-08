@@ -1,9 +1,13 @@
 ﻿//Evento que nos permite estar a la escucha del scaner.
 var inputEnter = document.getElementById("mat");
-var contenedor_errores = document.getElementById("alerta-error");
+
 var contenedorCamposPadre = document.getElementById("contenedor-campos-padre");
 var contenedorCamposHijo = document.getElementById("contenedor-campos-hijo");
 var contenedorGif = document.getElementById("gif-as");
+var contenedor = document.querySelector("#cont-send");
+var formID = document.querySelector("#formMatrIngr");
+var credesc = document.getElementById("credesc");
+var mat = document.getElementById("mat");
 
 inputEnter.addEventListener("keydown", function(event) {
   if (event.keyCode === 13) {
@@ -45,19 +49,33 @@ function validaCampos() {
       type: 'GET',
       success: function(data) {
         if (data == '') {
-          contenedor_errores.style.visibility = "hiddden";
-          contenedor_errores.innerHTML = "Ingresa una matrícula/número de expediente válido.";
-          contenedor_errores.style.visibility = "visible";
+          var contenedor = document.querySelector("#cont-send");
+          if (contenedor.hasChildNodes()) {
+            while (contenedor.hasChildNodes()) {
+            contenedor.removeChild(contenedor.firstChild);
+          }
+          }
+          var errores = "";
+          errores = "Ingresa una matrícula/número de expediente válido.";
+          var contenedorErrores = document.createElement("div");
+          contenedorErrores.className = "col-12 alerta-error p-2 mt-2";
+          contenedorErrores.innerHTML = errores;
+          contenedor.appendChild(contenedorErrores);
         } else {
-          alerta.style.display = "none";
+          var contenedor = document.querySelector("#cont-send");
+          if (contenedor.hasChildNodes()) {
+            while (contenedor.hasChildNodes()) {
+            contenedor.removeChild(contenedor.firstChild);
+          }
+          }
           contenedorCamposPadre.removeChild(contenedorCamposHijo);
           contenedorCamposPadre.removeChild(contenedorGif);
           var contenedorAbuelo = document.createElement("div");
-          contenedorAbuelo.className = "col-8";
+          contenedorAbuelo.className = "col-md-8 col-12 p-md-2 p-2";
           var contenedorPadre = document.createElement("div");
-          contenedorPadre.className = "col-12 registro-col-cen d-flex justify-content-center";
+          contenedorPadre.className = "col-12 registro-col-cen p-0 d-flex justify-content-center";
           var contenedorHijo = document.createElement("div");
-          contenedorHijo.className = "col-12 p-2";
+          contenedorHijo.className = "col-md-12 col-12 p-md-2 p-2 mt-2 mt-md-0";
           //  var card = document.createElement("div");
           // var cardbody= document.createElement("div");
           // if(x >= 3){
@@ -155,8 +173,13 @@ function validaCampos() {
           var buttonValidar = document.createElement("button");
           buttonValidar.addEventListener("click", function() {
             registrarVisita(mat, na, ap, am, nc, nf);
+            contenedorCamposPadre.removeChild(contenedorAbuelo);
+            contenedorCamposPadre.appendChild(contenedorCamposHijo);
+            contenedorCamposPadre.appendChild(contenedorGif);
+            registroExitoso();
+
           });
-          buttonValidar.className = "btn btn-primary d-flex justify-content-end";
+          buttonValidar.className = "ml-2 btn btn-primary d-flex justify-content-end";
           buttonValidar.innerHTML = "Registrar";
           contenedorHijo.appendChild(buttonValidar);
 
@@ -173,17 +196,41 @@ function validaCampos() {
 
 
 function inputNulo() {
-  var contenedor_errores = document.getElementById("alerta-error");
+  var contenedor = document.querySelector("#cont-send");
+  if (contenedor.hasChildNodes()) {
+    while (contenedor.hasChildNodes()) {
+    contenedor.removeChild(contenedor.firstChild);
+  }
+  }
   var errores = "";
   errores = "Pasa tu credencial por el escáner o escribe tu matrícula/número de expediente.";
-  contenedor_errores.innerHTML = errores;
-  contenedor_errores.style.visibility = "visible";
+  var contenedorErrores = document.createElement("div");
+  contenedorErrores.className = "col-12 alerta-error p-2 mt-2";
+  contenedorErrores.innerHTML = errores;
+  contenedor.appendChild(contenedorErrores);
 }
 
 function borrarTodo() {
   var cardAlumno = document.getElementById("contenedor-card-alumno");
   cardAlumno.removeChild(cardAlumno.childNodes);
 }
+
+function registroExitoso(){
+
+  credesc.className = "alert alert-success text-center mt-5";
+  credesc.innerHTML = "¡Has registrado tu visita con éxito!";
+  formID.removeChild(mat);
+
+  setInterval(function(){
+
+    credesc.className = "alert alert-info text-center mt-5";
+    credesc.innerHTML = "Pasa tu credencial por el escáner.";
+     formID.appendChild(mat);
+     formID.reset();
+  },3000);
+}
+
+
 
 function registrarVisita(mat, na, ap, am, nc, nf) {
   var ll = null;
@@ -213,7 +260,7 @@ function registrarVisita(mat, na, ap, am, nc, nf) {
     "LL": llave,
     "T": turno
   };
-  var data = JSON.stringify(ALUMNO); 
+  var data = JSON.stringify(ALUMNO);
   console.log(ALUMNO);
   console.log(data);
   $.ajax({

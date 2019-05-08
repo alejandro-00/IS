@@ -12,9 +12,9 @@
 </head>
 <body>
 	<!-- Contenedor principal -->
-	<div class="container-fluid p-0">
+	<div class="container-fluid">
 		<div class="row container-header-sup d-flex justify-content-center align-items-center">
-			<div class="col-4 d-flex aling-items-center justify-content-center">
+			<div class="col-12 d-flex align-items-center justify-content-center">
 				<span class="encabezado-infoteca">INFOTECA CAMPUS ARTEAGA</span>
 				<!--	<table>
 				<thead>
@@ -31,50 +31,47 @@
 
 		<!-- Logotipo UAdeC situado en el nav -->
 		<div class="row container-header-inf d-flex align-items-center">
-			<div class="col-4 header-col-inf-1 text-center d-flex justify-content-end ">
-				<ul class="">
-					<li class="mr-5 animacion-banderas"><a href="#"><img src="../imagenes/lang/es.png"></a></li>
-					<li class="mr-5 animacion-banderas"><a href="#"><img src="../imagenes/lang/en.png"></a></li>
-				</ul>
-				<div class="dropdown show">
+			<div class="order-2 order-md-1 col-xs-12 col-sm-12 col-md-4 header-col-inf-1 d-flex justify-content-md-end justify-content-center">
+				<a href="#" class="mr-md-5 mr-5 animacion-banderas"><img src="../imagenes/lang/es.png"></a>
+				<a href="#"  class="mr-md-5 mr-5 animacion-banderas"><img src="../imagenes/lang/en.png"></a>
+				<div class="ml-md-0 mr-0 flex-md-row flex-column dropdown show">
 					<a href="#" class="a-registro dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
 						<a class="a-dropdownmenu dropdown-item" href="registrar-visita.html">Credencial</a>
 						<a class="a-dropdownmenu dropdown-item" href="externos-registro.html">Externos</a>
 					</div>
 				</div>
-			</div>
-			<div class="col-4 header-col-inf-2">
+</div>
+
+			<div class="order-1 order-md-2 col-12 col-sm-12 col-md-8 header-col-inf-2 d-flex justify-content-md-start justify-content-center ">
 				<ul class="">
-					<li class="ml-5"><a href="registrar-visita.html"><img src="../imagenes/logotipo-nav/logo.png" width="192" height="72"></a></li>
+					<li class="ml-md-5 mr-md-0 mr-4 mt-2 mt-md-0"><a href="registrar-visita.html"><img src="../imagenes/logotipo-nav/logo.png" width="192" height="72" id="logoid"></a></li>
 				</ul>
-			</div>
-			<div class="col-4 header-col-inf-2">
 			</div>
 		</div>
 		<!-- Sección de botones para el registro -->
 
-		<div class="row mt-3 p-2" id="contenedor-campos-padre">
-			<div class="col-8" id="contenedor-campos-hijo">
-				<div class="col-12 registro-col-cen d-flex justify-content-center">
-					<div class="col-8 p-2">
+		<div class="row mt-md-0 mt-0 p-md-3 p-2" id="contenedor-campos-padre">
+			<div class="col-md-8 col-12 p-md-2 p-2" id="contenedor-campos-hijo">
+				<div class="col-12 registro-col-cen p-0 d-flex justify-content-center">
+					<div class="col-md-9 col-10 p-md-2 p-0">
 						<form id="formMatrIngr" class="form-group">
-							<div class="alert alert-info text-center mt-5">
+							<div class="alert alert-info text-center mt-5" id="credesc">
 								Pasa tu credencial por el escáner.
 							</div>
 
-							<input type="text" class="form-control form-control-sm" name="" placeholder="Credencial" id="mat" maxlength="8">
+							<input type="text" class="form-control form-control-sm text-center" name="" placeholder="Credencial" id="mat" maxlength="8">
 						</form>
-						<div class="col-12 alerta-error text-center p-0" id="alerta-error" style="visibility: hidden;">
+						<div class="col-12 p-0" id="cont-send">
 
-						</div>
+			</div>
 
 					</div>
 
 				</div>
 			</div>
 			<!-- Aside -->
-			<div class="col-4" id="gif-as">
+			<div class="col-md-4 col-12 p-md-2 p-0" id="gif-as">
 				<img src="../imagenes/gif/gif-aside.gif" class="gif-cen-der img-fluid img-responsive">
 			</div>
 		</div>
@@ -82,15 +79,14 @@
 
 
 		<!-- Footer -->
-		<div class="row container-footer-sup d-flex justify-content-center align-items-center p-0">
+		<div class="row mt-0 container-footer-sup d-flex justify-content-center align-items-center p-0">
 			<div class="col-12 d-flex justify-content-center">
-				<div class="col-5 footer-col-sup">
-					<p class="p-text-footer text-center">"EN EL BIEN, FINCAMOS EL SABER".</p>
-				</div>
+					<span class="p-text-footer text-center">"EN EL BIEN, FINCAMOS EL SABER".</span>
 			</div>
 		</div>
-		<div class="row container-footer-inf p-0">
-			<div class="col-4 d-flex justify-content-center align-items-center">
+
+		<div class="row container-footer-inf p-0 d-flex flex-md-column flex-row">
+			<div class="p-2 footer-info col-xs-12 col-sm-12 col-md-4 d-flex justify-content-center align-items-center p-2">
 				<table class="">
 					<thead>
 						<tr>
@@ -99,13 +95,14 @@
 					</thead>
 					<tbody>
 						<tr>
-							<th scope="row" class="tb-text-footer">01(844)411-1400 | 411-1401</th>
+							<th scope="row" class="tb-text-footer text-center">01(844)411-1400 | 411-1401</th>
 						</tr>
 					</tbody>
 				</table>
 				<!--<span class="texto-footer telefono-elemento" id="tel-element">01(844)411-1400 | 411-1401</span>-->
 			</div>
-			<div class="footer-info col-4 d-flex justify-content-center align-items-center">
+
+			<div class="p-2 footer-info col-xs-12 col-sm-12 col-md-4 d-flex justify-content-center align-items-center">
 				<table class="">
 					<thead>
 						<tr>
@@ -114,13 +111,13 @@
 					</thead>
 					<tbody>
 						<tr>
-							<th scope="row" class="tb-text-footer">Carretera 57 km. 13. Ciudad Universitaria. Arteaga, Coahuila.</th>
+							<th scope="row" class="tb-text-footer text-center">Carretera 57 km. 13. Ciudad Universitaria. Arteaga, Coahuila.</th>
 						</tr>
 					</tbody>
 				</table>
 				<!--<span class="texto-footer ubicacion-elemento">Carreta 57 km. 13. Ciudad Universitaria. Arteaga, Coahuila.</span>-->
 			</div>
-			<div class="footer-info col-4 d-flex justify-content-center align-items-center">
+				<div class="p-2 footer-info col-xs-12 col-sm-12 col-md-4 d-flex justify-content-center align-items-center">
 				<table class="">
 					<thead>
 						<tr>
@@ -129,18 +126,17 @@
 					</thead>
 					<tbody>
 						<tr>
-							<th scope="row" class="tb-text-footer">L-V de 8:00 a.m. a 9:00 p.m.</th>
+							<th scope="row" class="tb-text-footer text-center">L-V de 8:00 a.m. a 9:00 p.m.</th>
 						</tr>
 					</tbody>
 				</table>
 				<!--<span class="texto-footer horario-elemento">L-V de 8:00 a.m. a 9:00 p.m.</span>-->
 			</div>
 		</div>
+
 	</div>
 
-	<script src="../javascript/regresarContenedor.js"></script>
-	<script src="../javascript/wsprueba.js"></script>
-	<script src="../javascript/borrarCampos.js"></script>
+	<script src="../javascript/ajax-peticion.js"></script>
 	<script src="../js/jquery-3.3.1.min.js"></script>
 	<script src="../js/popper.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
