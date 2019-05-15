@@ -6,10 +6,14 @@ include 'connection.php';
 }*/
 
 $results;
-$MAT = $_GET["matricula"];
+$MAT = $_POST["matricula"];
 
-$stbi = $conn->prepare("CALL ALM(?)");
-$stbi->bindParam(1, $MAT);
+$stbi = $conn->prepare("SELECT A.MATRICULA,A.NOMBRE,A.PATERNO,A.MATERNO,A.SEXO,CC.N_C,E.N_ESC FROM cursa C 
+JOIN alumnos A ON A.MATRICULA=C.MATRICULA
+JOIN carrera CC ON C.ID_C=CC.ID_C
+JOIN escuelas E ON CC.ID_E=E.ID_E
+WHERE A.MATRICULA=;'$MAT'");
+//$stbi->bindParam(1, $MAT);
 $stbi->setFetchMode(PDO::FETCH_ASSOC);
 $stbi->execute();
 $results = $stbi->fetchAll();
