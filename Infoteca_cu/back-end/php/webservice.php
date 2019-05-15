@@ -5,20 +5,25 @@ include 'connection.php';
 	die('Invalid');
 }*/
 
-$results;
-$MAT = $_POST["matricula"];
 
-$stbi = $conn->prepare("SELECT A.MATRICULA,A.NOMBRE,A.PATERNO,A.MATERNO,A.SEXO,CC.N_C,E.N_ESC FROM cursa C 
-JOIN alumnos A ON A.MATRICULA=C.MATRICULA
-JOIN carrera CC ON C.ID_C=CC.ID_C
-JOIN escuelas E ON CC.ID_E=E.ID_E
-WHERE A.MATRICULA=;'$MAT'");
-//$stbi->bindParam(1, $MAT);
+$results;
+$MAT = $_GET["matricula"];
+
+$stbi = $conn->prepare("SELECT A.MATRICULA,A.NOMBRE,A.PATERNO,A.MATERNO,A.SEXO,CC.N_C,E.N_ESC FROM cursa C JOIN alumnos A ON A.MATRICULA=C.MATRICULA JOIN carrera CC ON C.ID_C=CC.ID_C JOIN escuelas E ON CC.ID_E=E.ID_E WHERE A.MATRICULA=?");
+$stbi->bindParam(1, $MAT);
 $stbi->setFetchMode(PDO::FETCH_ASSOC);
 $stbi->execute();
 $results = $stbi->fetchAll();
 //print_r($results);
-echo json_encode($results);
+$data=[];
+foreach ($results as $arr => $key) {
+    foreach ($key as $val => $value) {
+        $data[$arr][$val]=utf8_encode($value);
+    }
+}
+//print_r($data);
+echo json_encode($data);
+
 
 $conn=null;
 
