@@ -2,13 +2,14 @@
 include 'connection.php';
 
 //recibe json {MAT INT,NA STRING,AP STRING,AM STRING,NC STRING,NF STRING,LL INT,T INT}
-$json=json_decode($_GET["x"],false);
+$json=json_decode($_POST["x"],false);
 //print_r($json);
 //echo $json->MAT;
 $result=[];
 
 try{
-    $stbi = $conn->prepare("CALL regi(?,?,?,?,?,?)");
+    $stbi = $conn->prepare("INSERT INTO registro(MATRICULA,NOMBRE_ALUMNO,PATERNO,MATERNO,NOMBRE_CARRERA,NOMBRE_FACULTAD,HORA,FECHA) 
+    VALUES(?,?,?,?,?,?,TIME(NOW()),DATE(NOW()));");
     $stbi->bindParam(1,$json->MAT);
     $stbi->bindParam(2,$json->NA);
     $stbi->bindParam(3,$json->AP);

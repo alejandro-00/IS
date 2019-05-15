@@ -17,7 +17,7 @@ Brandon Emmanuel Delabra Salinas
 
 [Mario Alejandro Manzano Montes](https://github.com/mariomanza)
 
-## Arquitectos
+## Diseñadores
 Emilio Barrera González
 
 Luis Fernando Garcia Morales

@@ -3,6 +3,18 @@ require('fpdf.php');
 date_default_timezone_set("America/Mexico_City");
 include 'connection.php';
 
+
+$str=json_decode($_POST,false);
+$stbi = $conn->prepare("SELECT R.NOMBRE_FACULTAD,(SELECT count(ID_REGISTRO) FROM registro WHERE HORA BETWEEN '00:00:00' AND '14:59:59' AND NOMBRE_FACULTAD=R.NOMBRE_FACULTAD AND FECHA BETWEEN '$str[0]' AND '$str[1]') AS 'Turno matutino',(SELECT count(ID_REGISTRO) FROM registro WHERE HORA BETWEEN '15:00:00' AND '23:59:59' AND NOMBRE_FACULTAD=R.NOMBRE_FACULTAD AND FECHA BETWEEN '$str[0]' AND '$str[1]') AS 'Turno vespertino',
+(SELECT count(ID_REGISTRO) FROM registro WHERE NOMBRE_FACULTAD=R.NOMBRE_FACULTAD AND FECHA BETWEEN '$str[0]' AND '$str[1]') AS TOTAL
+FROM registro R
+GROUP BY R.NOMBRE_FACULTAD;");
+$stbi->bindParam(1,$str[0]);
+$stbi->bindParam(2,$str[1]);
+$stbi->setFetchMode(PDO::FETCH_ASSOC);
+$stbi->execute();
+$data = $stbi->fetchAll();
+
 //se crea la clase PDF eredando FPDF para editar el Header y el Footer
 class PDf extends FPDF{
     function LoadData($file){
@@ -88,16 +100,10 @@ Formato: A4, A3, A5, Letter, Legal.
 $pdf = new PDF('P','mm','Letter');
 $pdf->SetTitle('SI-F-AUS-02');
 $header = array('ESCUELA/FACULTAD', "TURNO MATUTINO",'TURNO VESPERTINO','TOTAL');
-$stbi = $conn->prepare("CALL a()");
-$stbi->setFetchMode(PDO::FETCH_ASSOC);
-$stbi->execute();
-$results = $stbi->fetchAll();
-$result = json_encode($results);
-$data=json_decode($result,true);
 //$data = $pdf->LoadData('registro.txt');
 $pdf->AddPage();
 $pdf->FancyTable($header,$data);
-$pdf->Output("I","SI-F-AUS-02.pdf");
+$pdf->Output('I',"SI-F-AUS-02.pdf");
 $conn=null;
 /*
 $msg = is_readable($fn) ? $msg = 'File is readable'
