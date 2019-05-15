@@ -4,7 +4,7 @@ date_default_timezone_set("America/Mexico_City");
 include 'connection.php';
 
 
-$str=json_decode($_POST,false);
+$str=json_decode($_GET,false);
 $stbi = $conn->prepare("SELECT R.NOMBRE_FACULTAD,(SELECT count(ID_REGISTRO) FROM registro WHERE HORA BETWEEN '00:00:00' AND '14:59:59' AND NOMBRE_FACULTAD=R.NOMBRE_FACULTAD AND FECHA BETWEEN '$str[0]' AND '$str[1]') AS 'Turno matutino',(SELECT count(ID_REGISTRO) FROM registro WHERE HORA BETWEEN '15:00:00' AND '23:59:59' AND NOMBRE_FACULTAD=R.NOMBRE_FACULTAD AND FECHA BETWEEN '$str[0]' AND '$str[1]') AS 'Turno vespertino',
 (SELECT count(ID_REGISTRO) FROM registro WHERE NOMBRE_FACULTAD=R.NOMBRE_FACULTAD AND FECHA BETWEEN '$str[0]' AND '$str[1]') AS TOTAL
 FROM registro R

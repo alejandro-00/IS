@@ -2,7 +2,7 @@
 include 'connection.php';
 
 //recibe json {MAT INT,NA STRING,AP STRING,AM STRING,NC STRING,NF STRING,LL INT,T INT}
-$json=json_decode($_POST["x"],false);
+$json=json_decode($_GET["x"],false);
 //print_r($json);
 //echo $json->MAT;
 $result=[];
