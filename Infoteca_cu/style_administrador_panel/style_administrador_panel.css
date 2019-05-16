@@ -1,0 +1,138 @@
+body{
+	background: #f2f2f2;
+}
+
+.nav-superior{
+	background: #161615;
+	height: 50px;
+}
+.nav-inferior{
+	background: #161615;
+	height: 50px;
+}
+.panel-contenedor{
+	background: #E2E2EF;
+}
+.alerta-error {
+  border-radius: 2px;
+  font-size: 14px;
+  background: #C13232;
+  border: 1px solid #AC1E1E;
+  color: #fff;
+}
+
+.vertical-menu{
+	height: 400px;
+	transition: all 1s;
+	background: #161615;
+}
+.vertical-menu a {
+  color: black; /* Black text color */
+  display: block; /* Make the links appear below each other */
+  padding: 10px; /* Add some padding */
+  text-decoration: none; /* Remove underline from links */
+  color: #c4c4b4;
+  font-size: 14px;
+}
+
+.vertical-menu a:hover {
+  background: black; /* Add a green color to the "active/current" link */
+  color: white;
+}
+
+
+.vertical-menu a:active {
+  background: black; /* Add a green color to the "active/current" link */
+  color: white;
+}
+.logout-ses:hover{
+	text-decoration: none; /* Remove underline from links */
+	color: #c4c4b4;
+	font-size: 14px;
+	color: white;
+}
+.btn-secondary{
+	background: transparent;
+	border: 1px solid white;
+	border-radius: 0px;
+	font-size: 13px;
+	color: white;
+	text-decoration: none;
+	transition: all 1s;
+}
+.btn-secondary:hover{
+	background: white;
+	border: 1px solid white;
+	border-radius: 0px;
+	transition: all 1s;
+	font-size: 13px;
+	color: black;
+	text-decoration: none;
+}
+.custom-logout{
+	font-size: 13px;
+	color: white;
+	text-decoration: none;
+	transition: all 1s;
+}
+.custom-logout:hover{
+	transition: all 1s;
+	font-size: 13px;
+	color: black;
+	text-decoration: none;
+}
+.icon-calendar{
+	background: #02589c;
+  padding: 2px;
+}
+.icon-calendar-check-o{
+	background: #93bf80;
+	padding: 2px;
+}
+.alert-success{
+  background: #76aa60;
+  border: 1px solid #85a573;
+  color: white;
+
+}
+.alert-info{
+  background: #0078d7;
+  border: 1px solid #026cc1;
+  color: white;
+
+}
+.icon-calendar-plus-o, .icon-calendar-minus-o{
+	background: #02589c;
+  padding: 2px;
+}
+
+/* Dispositivo sm */
+@media screen and (max-width: 550px) {
+	.vertical-menu{
+		transition: all 1s;
+		height: 80px;
+		background: #161615;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.vertical-menu{
+		transition: all 1s;
+		height: 80px;
+		background: #161615;
+	}
+}
+@media screen and (max-width: 355px) {
+	.vertical-menu{
+		transition: all 1s;
+		height: 80px;
+		background: #161615;
+	}
+}
+@media screen and (max-width: 767px) {
+	.vertical-menu{
+		transition: all 1s;
+		height: 80px;
+		background: #161615;
+	}
+}
