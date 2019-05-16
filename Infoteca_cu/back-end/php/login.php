@@ -17,9 +17,11 @@ try {
 		if ($res['permissions']==1) {
             echo 'admin';
         } elseif ($res['permissions']==3) {
-            echo 'registro'
+            echo 'registro';
         }
-	}
+	} else {
+        echo false;
+    }
 } catch (Exception $e) {
     echo 'Message: '.$e->getMessage();
 }
