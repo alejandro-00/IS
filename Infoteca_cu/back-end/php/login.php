@@ -12,6 +12,7 @@ try {
     if ($data['pswd']==$res['pswd']) {
 		$_SESSION['userid'] = $data['name'];
 		$_SESSION['pswd'] = $data['pswd'];
+        $>SESSION['status'] = $res['permissions'];
 		$stbi = null;
 		echo true;
 	}

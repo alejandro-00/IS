@@ -2,7 +2,7 @@
 include 'connection.php';
 session_start();
 
-if($_SESSION['userid']==''or $_SESSION['pswd']==''){
+if($_SESSION['userid']==''or $_SESSION['pswd']=='') {
 	die('Invalid');
 }
 
