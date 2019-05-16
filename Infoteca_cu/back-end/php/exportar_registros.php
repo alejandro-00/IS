@@ -3,7 +3,13 @@ require_once 'Classes/PHPExcel.php';
 
 include 'connection.php';
 
-$stbi = $conn->prepare("SELECT * FROM registro;");
+$arr=json_decode($_GET["x"]);
+
+$dates=[];
+$dates[0]=date("o-m-d", strtotime($arr->FID));
+$dates[1]=date("o-m-d", strtotime($arr->LAD));
+
+$stbi = $conn->prepare("SELECT * FROM registro where FECHA between '$dates[0]' and '$dates[1]';");
 $stbi->setFetchMode(PDO::FETCH_ASSOC);
 $stbi->execute();
 $data = $stbi->fetchAll();

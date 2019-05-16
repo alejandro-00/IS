@@ -3,9 +3,9 @@
 date_default_timezone_set('America/Mexico_City');
 
     $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "registro";
+    $username = "ingresoinfoteca";
+    $password = "gxpbra998zpr";
+    $dbname = "ingresos";
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
