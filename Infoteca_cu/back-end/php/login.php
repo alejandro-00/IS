@@ -2,7 +2,7 @@
 include 'connection.php';
 session_start();
 
-$data = json_decode($_GET);
+$data = json_decode($_POST["x"]);
 
 try {
     $stbi = $conn->prepare("Select NOM_USER, PASW_USER, permissions from users where name = ?");

@@ -17,7 +17,10 @@ $data = $stbi->fetchAll();
 
 
 $obj = new PHPExcel();
-$obj->getActiveSheet()->setTitle('Registros');
+$obj->getProperties()
+->setCreator('Sistema de Infoteca')
+->setTitle('Registros')
+->setSubject('Registro de alumnos');
 $obj->getActiveSheet()->setCellValueByColumnAndRow(0,1,'Matrícula');
 $obj->getActiveSheet()->setCellValueByColumnAndRow(1,1,'Nombre');
 $obj->getActiveSheet()->setCellValueByColumnAndRow(2,1,'Apellido paterno');

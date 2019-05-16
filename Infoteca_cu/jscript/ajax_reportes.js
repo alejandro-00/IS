@@ -46,7 +46,7 @@ if(validacionFechas() == true){
               data:{ x: data},
               dataType: 'json',
               type: 'GET',
-              success: function(data) {
+              success: function(dato) {
                 var contenedor = document.querySelector("#cont-send");
                 if (contenedor.hasChildNodes()) {
                   while (contenedor.hasChildNodes()) {
@@ -54,6 +54,7 @@ if(validacionFechas() == true){
                 }
                 }
                   registroExitoso();
+                  windows.open("www.ingresoinfoteca.uadec.mx/back-end/php/generar_reporte.php?x=&x={",MES,"%3A"+mesPeticion+"}");
               }
             });
           }
