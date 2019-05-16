@@ -44,29 +44,13 @@ if(validacionFechas() == true){
 
   var fDate = firstDate;
   var lDate = lastDate;
+console.log(fDate);
+console.log(lDate);
+    registroExitoso();
+    window.open("http://www.ingresoinfoteca.uadec.mx/back-end/php/exportar_registros.php?x=&x=%7B%22FID%22%3A%22"+fDate+"%22%2C%22LAD%22%3A%22"+lDate+"%22%7D");
+            }
+  }
 
-            var FECHA = {
-              "FID": fDate,
-              "LAD": lDate,
-            };
-            var data = JSON.stringify(FECHA);
-            $.ajax({
-              url: '../back-end/php/exportar_registros.php?x=',
-              data:{ x: data},
-              dataType: 'json',
-              type: 'GET',
-              success: function(data) {
-                var contenedor = document.querySelector("#cont-send");
-                if (contenedor.hasChildNodes()) {
-                  while (contenedor.hasChildNodes()) {
-                  contenedor.removeChild(contenedor.firstChild);
-                }
-                }
-                  registroExitoso();
-              }
-            });
-          }
-}
 
 
 

@@ -33,29 +33,10 @@ function validacionFechas() {
 function ajax_reportes(){
 if(validacionFechas() == true){
   var mes = document.querySelector("#mes").value;
-
-
   var mesPeticion = mes;
+  registroExitoso();
+  window.open("http://www.ingresoinfoteca.uadec.mx/back-end/php/generar_reporte.php?x=&x={\"MES\"\%3A\""+mesPeticion+"\"}");
 
-            var FECHA = {
-              "MES": mesPeticion
-            };
-            var data = JSON.stringify(FECHA);
-            $.ajax({
-              url: '../back-end/php/generar_reporte.php?x=',
-              data:{ x: data},
-              dataType: 'json',
-              type: 'GET',
-              success: function(data) {
-                var contenedor = document.querySelector("#cont-send");
-                if (contenedor.hasChildNodes()) {
-                  while (contenedor.hasChildNodes()) {
-                  contenedor.removeChild(contenedor.firstChild);
-                }
-                }
-                  registroExitoso();
-              }
-            });
           }
 }
 
