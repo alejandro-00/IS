@@ -4,7 +4,8 @@ session_start();
 
 try {
 	session_destroy();
-	echo true;
+	header("Location: http://www.ingresoinfoteca.uadec.mx/");
+    die();
 } catch (Exception $e) {
     echo 'Message: '.$e->getMessage();
 }

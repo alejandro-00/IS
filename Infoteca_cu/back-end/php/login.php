@@ -12,9 +12,16 @@ try {
     if ($data['pswd']==$res['pswd']) {
 		$_SESSION['userid'] = $data['name'];
 		$_SESSION['pswd'] = $data['pswd'];
+        $_SESSION['status'] = $res['permissions'];
 		$stbi = null;
-		echo true;
-	}
+		if ($res['permissions']==1) {
+            echo 'admin';
+        } elseif ($res['permissions']==3) {
+            echo 'registro';
+        }
+	} else {
+        echo false;
+    }
 } catch (Exception $e) {
     echo 'Message: '.$e->getMessage();
 }

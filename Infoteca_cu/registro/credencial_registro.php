@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php
+session_start();
+
+if($_SESSION['userid']=='' or $_SESSION['pswd']==''){
+	die('Invalid');
+}
+?>
 <html lang="en">
 
 <head>
@@ -9,8 +15,7 @@
 	<link rel="icon" type="image/png" href="../imagenes/icono-pagina/favicons.png">
 	<link rel="stylesheet" type="text/css" href="../style_registro/style_registro.css">
 	<link rel="stylesheet" href="../css/css/fontello.css">
-
-	<title>Registro de externos - Infoteca CU</title>
+	<title>Registro con Matrícula - Infoteca CU</title>
 </head>
 
 <body>
@@ -19,6 +24,7 @@
 		<div class="row container-header-sup d-flex justify-content-center align-items-center">
 			<div class="log p-0"><a href="../back-end/php/cerrar_sesion.php"><span class="icon-logout p-0"></span></a></div>
 			<div class="col-12 d-flex align-items-center justify-content-center">
+
 				<span class="encabezado-infoteca">INFOTECA CAMPUS ARTEAGA</span>
 				<!--	<table>
 				<thead>
@@ -41,64 +47,39 @@
 				<div class="ml-md-0 mr-0 flex-md-row flex-column dropdown show mt-toggle">
 					<a href="#" class="a-registro dropdown-toggle" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
 					<div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-						<a class="a-dropdownmenu dropdown-item" href="credencial_registro.html">Credencial</a>
-						<a class="a-dropdownmenu dropdown-item" href="externos_registro.html">Externos</a>
+						<a class="a-dropdownmenu dropdown-item" href="credencial_registro.php">Credencial</a>
+						<a class="a-dropdownmenu dropdown-item" href="externos_registro.php">Externos</a>
 					</div>
 				</div>
 			</div>
 
 			<div class="order-1 order-md-2 col-12 col-sm-12 col-md-8 header-col-inf-2 d-flex justify-content-md-start justify-content-center align-items-center">
 				<ul class="d-flex alignt-items-center">
-					<li class="ml-md-5 mr-md-0 mr-4 mt-2 mt-md-3"><a href="credencial_registro.html"><img src="../imagenes/logotipo-nav/logo.png" id="logoid"></a></li>
+					<li class="ml-md-5 mr-md-0 mr-4 mt-2 mt-md-3"><a href="credencial_registro.php"><img src="../imagenes/logotipo-nav/logo.png" id="logoid"></a></li>
 				</ul>
 			</div>
 		</div>
 		<!-- Sección de botones para el registro -->
-		<div class="row mt-md-0 mt-0 p-md-3 p-2">
-			<div class="col-md-8 col-12 pt-md-2 pl-md-2 pr-md-1 pb-md-2 p-2" id="contenedor-campos-ingreso-externos">
-				<div class="col-12 registro-col-cen-externos p-0 d-flex justify-content-center">
+
+		<div class="row mt-md-0 mt-0 p-md-3 p-2" id="contenedor-campos-padre">
+			<div class="col-md-8 col-12 pt-md-2 pl-md-2 pr-md-1 pb-md-2 p-2" id="contenedor-campos-hijo">
+				<div class="col-12 registro-col-cen p-0 d-flex justify-content-center">
 					<div class="col-md-9 col-10 p-md-2 p-0">
-						<div class="alert alert-info text-center mt-5">
-							Ingresa tus datos.
-						</div>
-						<form id="formExtRegi">
-							<div class="form-row">
-								<div class="form-group col-md-4">
-									<input type="text" class="form-control form-control-sm" name="nomb" id="nomb" placeholder="Nombre">
-								</div>
-								<div class="form-group col-md-4">
-									<input type="text" class="form-control form-control-sm" name="pate" id="pate" placeholder="Apellido Paterno">
-								</div>
-								<div class="form-group col-md-4">
-									<input type="text" class="form-control form-control-sm" name="mate" id="mate" placeholder="Apellido Materno">
-								</div>
+						<form id="formMatrIngr" class="form-group">
+							<div class="alert alert-info text-center mt-5" id="credesc"><span class="icon-credit-card rounded-circle text-center"></span>
+								Pasa tu credencial por el escáner.
 							</div>
-							<input type="text" class="form-control form-control-sm" name="ocup" placeholder="Ocupación" id="ocup">
-							<input type="tel" class="form-control form-control-sm mt-3" name="tele" placeholder="Teléfono" id="tele">
-							<div class="form-row p-0">
-							<div class="form-group col-5">
-							<input type="text" class="form-control form-control-sm mt-3" name="inst" placeholder="Institución" id="inst">
-						</div>
-						<div class="form-group col-7 mt-3 mt-0">
-							<div class="form-check">
-						     <input type="checkbox" class="form-check-input" id="locker" aria-describedby="locka" >
-								   <small id="locka" class="form-text text-muted" name="lockk">Marca la casilla en caso de requerir un locker.</small>
-						   </div>
-						</div>
-					</div>
-							<div class="mb-3">
-								<button type="button" class="btn btn-success mt-1" onclick="ajax_externos()">Registrar visita</button>
-								<button type="button" class="btn btn-warning mt-1" onclick="borrarCamposMatriculaExternos()">Limpiar</button>
-							</div>
+
+							<input type="text" class="form-control form-control-sm text-center" name="mat" placeholder="Credencial" id="mat" maxlength="8" autocomplete="off">
 						</form>
-						<div class="col-12 p-0" id="cont-send">
+						<div class="col-12 p-0 text-center" id="cont-send">
 
 						</div>
 
 					</div>
+
 				</div>
 			</div>
-
 			<!-- Aside -->
 			<div class="col-md-4 col-12 pt-md-2 pl-md-4 pt-mb-2 p-0" id="gif-as">
 				<img src="../imagenes/gif/gif-aside.gif" class="gif-cen-der img-fluid img-responsive">
@@ -165,11 +146,22 @@
 
 	</div>
 
-
-	<script src="../jscript/ajax_externos.js"></script>
+	<script src="../jscript/ajax_credencial.js"></script>
 	<script src="../js/jquery-3.3.1.min.js"></script>
 	<script src="../js/popper.min.js"></script>
 	<script src="../js/bootstrap.min.js"></script>
+	<script type="text/javascript">
+		var mat = document.getElementById("mat");
+		mat.focus();
+
+		mat.addEventListener("focusout", funcionEjemplo);
+
+		function funcionEjemplo(e) {
+			e.preventDefault();
+			document.getElementById("mat").focus();
+
+		}
+	</script>
 </body>
 
 </html>

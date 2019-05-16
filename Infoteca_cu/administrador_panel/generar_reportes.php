@@ -1,4 +1,10 @@
-<!DOCTYPE html>
+<?php
+session_start();
+
+if($_SESSION['userid']=='' or $_SESSION['pswd']==''){
+	die('Invalid');
+}
+?>
 <html lang="en">
 
 <head>
@@ -26,8 +32,8 @@
 
 		<div class="row mt-3">
 			<div class="col-12 col-md-3 col-lg-2 vertical-menu p-0 flex-column flex-md-row ">
-				<a href="generar_reportes.html" class="text-center text-md-left active icon-doc"> Reporte SI-F-AUS-2</a>
-				<a href="exportar_registros.html" class="text-center text-md-left icon-doc-text"> Exportar Registros</a>
+				<a href="generar_reportes.php" class="text-center text-md-left active icon-doc"> Reporte SI-F-AUS-2</a>
+				<a href="exportar_registros.php" class="text-center text-md-left icon-doc-text"> Exportar Registros</a>
 			</div>
 
 			<div class="col-12 col-md-9 col-lg-10 mt-md-0 mt-3">
